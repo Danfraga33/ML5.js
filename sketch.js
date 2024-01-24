@@ -44,13 +44,13 @@ function setup() {
 	mobilenet = ml5.featureExtractor('MobileNet', modelReady);
 	classifier = mobilenet.classification(video, videoReady);
 
-	leftButton = createButton('Left');
-	leftButton.mousePressed(function () {
-		classifier.addImage('Left');
+	bookButton = createButton('Book');
+	bookButton.mousePressed(function () {
+		classifier.addImage('Book');
 	});
-	rightButton = createButton('Right');
-	rightButton.mousePressed(function () {
-		classifier.addImage('Right');
+	phoneButton = createButton('Phone');
+	phoneButton.mousePressed(function () {
+		classifier.addImage('Phone');
 	});
 
 	trainButton = createButton('Train');
@@ -62,7 +62,7 @@ function setup() {
 function draw() {
 	background(0);
 	image(video, 0, 0);
-	fill(255);
-	textSize(32);
-	text(label, 10, height - 34);
+	// fill(255);
+	// textSize(32);
+	// text(label, 10, height - 34);
 }
